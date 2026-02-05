@@ -1,0 +1,228 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('background-image.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 20%;
+}
+
+.desktop {
+    position: relative;
+    width: 80%;
+    height: 80%;
+}
+
+.folder {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.folder img {
+    width: 100%;
+    height: 100%;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: 120px;
+}
+
+.folder:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Posiciones de carpetas */
+#about-me {
+    top: 10%;
+    left: 35%;
+}
+
+#imagenes {
+    top: 50%;
+    left: 10%;
+}
+
+#audio {
+    top: 70%;
+    left: 40%;
+}
+
+#arte {
+    top: 30%;
+    left: 60%;
+}
+
+#videos {
+    top: 80%;
+    left: 5%;
+}
+
+#textos {
+    top: 20%;
+    left: 50%;
+}
+
+@media (max-width: 768px) {
+    .desktop {
+        width: 90%;
+        height: 90%;
+    }
+
+    .folder {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tooltip {
+        width: 100px;
+    }
+
+    #about-me {
+        top: 10%;
+        left: 30%;
+    }
+
+    #imagenes {
+        top: 50%;
+        left: 5%;
+    }
+
+    #audio {
+        top: 70%;
+        left: 30%;
+    }
+
+    #arte {
+        top: 30%;
+        left: 50%;
+    }
+
+    #videos {
+        top: 80%;
+        left: 5%;
+    }
+
+    #textos {
+        top: 20%;
+        left: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .desktop {
+        width: 100%;
+        height: 100%;
+    }
+
+    .folder {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tooltip {
+        width: 80px;
+        bottom: 150%;
+    }
+
+    #about-me {
+        top: 10%;
+        left: 20%;
+    }
+
+    #imagenes {
+        top: 50%;
+        left: 5%;
+    }
+
+    #audio {
+        top: 70%;
+        left: 20%;
+    }
+
+    #arte {
+        top: 30%;
+        left: 40%;
+    }
+
+    #videos {
+        top: 80%;
+        left: 5%;
+    }
+
+    #textos {
+        top: 20%;
+        left: 30%;
+    }
+}
+.folder .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Estilos adicionales para videos */
+.video-gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 20px;
+padding: 20px;
+}
+
+.video-container {
+position: relative;
+width: 300px;
+height: 200px;
+}
+
+.video-container iframe {
+width: 100%;
+height: 100%;
+}
+
+.video-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+opacity: 0;
+transition: opacity 0.3s;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+font-size: 20px;
+text-decoration: none;
+}
+
+.video-container:hover .video-overlay {
+opacity: 1;
+}

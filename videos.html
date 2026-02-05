@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('videos-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .video-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .video-container:hover .video-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galería de Videos</h1>
+    <div class="video-gallery">
+        <!-- Video 1 -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/?v=T8nItMWz6p0&ab_channel=%EA%A7%81%E0%BC%BAMISHA%E0%BC%BB%EA%A7%82" frameborder="0" allowfullscreen></iframe>
+            <a href="https://www.youtube.com/watch?v=T8nItMWz6p0&ab_channel=%EA%A7%81%E0%BC%BAMISHA%E0%BC%BB%EA%A7%82" class="video-overlay">Ver en YouTube</a>
+        </div>
+        <!-- Video 2 -->
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/?v=U6wIwMbfiTw" frameborder="0" allowfullscreen></iframe>
+            <a href="https://www.youtube.com/watch?v=U6wIwMbfiTw" class="video-overlay">Ver en YouTube</a>
+        </div>
+        <!-- Agrega más videos según sea necesario -->
+    </div>
+    <a href="index.html">Volver</a>
+</body>
+</html>
